@@ -59,6 +59,9 @@ public class TableMetaInfo {
 
     /**
      * 从文件中读取元信息，按照写入的顺序倒着读取出来
+     *
+     * 为什么倒着读出来呢？因为行尾巴字段是固定长度
+     *
      * @param file
      * @return
      */

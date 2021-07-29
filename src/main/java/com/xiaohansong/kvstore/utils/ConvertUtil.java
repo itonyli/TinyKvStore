@@ -10,7 +10,11 @@ public class ConvertUtil {
 
     public static final String TYPE = "type";
 
-
+    /**
+     * 为什么有仅有SET、RM 两个command呢？因为只有这个操作会对数据持久化产生影响
+     * @param value
+     * @return
+     */
     public static Command jsonToCommand(JSONObject value) {
         if (value.getString(TYPE).equals(CommandTypeEnum.SET.name())) {
             return value.toJavaObject(SetCommand.class);
